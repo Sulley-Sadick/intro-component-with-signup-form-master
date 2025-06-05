@@ -1,0 +1,245 @@
+/* imported fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* root */
+:root {
+  /* Primary colors */
+  ---primary-red: #ff7a7a;
+  ---primary-green: #38cc8c;
+  ---white: #fff;
+
+  /* error color */
+  ---error-color: #f25454;
+
+  /* Accent color */
+  ---accent-blue: #6055a5;
+
+  /* Neutral colors*/
+  ---neutral-dark-blue: #3e3c49;
+  ---neutral-grayish-blue: #b9b6d3;
+
+  /* Typography */
+  ---font-family: "Poppins";
+  ---font-size-body: 1rem;
+  ---font-weight-400: 400;
+  ---font-weight-500: 500;
+  ---font-weight-600: 600;
+  ---font-weight-700: 700;
+}
+
+/* universal selector */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* preset */
+a {
+  text-decoration: none;
+}
+
+/* body styles */
+body {
+  font-family: var(---font-family);
+  font-weight: var(---font-weight-400);
+  font-size: var(---font-size-body);
+  background: url(./images/bg-intro-mobile.png) no-repeat center fixed
+    var(---primary-red);
+  color: var(---white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* title styles */
+.title {
+  color: var(---white);
+  font-weight: var(---font-weight-700);
+  margin: 5rem 0 2rem 0;
+}
+
+/* desc styles */
+.desc {
+  font-weight: var(---font-weight-500);
+  color: #f5f5f5;
+  padding-inline: 0.5rem;
+}
+
+/* button styles */
+.button {
+  font-weight: var(---font-weight-700);
+  background-color: var(---accent-blue);
+  max-width: 25rem;
+  margin: 5rem auto 2rem auto;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+/* buttton hover state */
+.button:hover {
+  background-color: #796fb9d7;
+}
+
+/* button span styles */
+.button span {
+  color: var(---neutral-grayish-blue);
+  font-weight: var(---font-weight-400);
+}
+
+/* form content */
+.form-content {
+  max-width: 25rem;
+  background-color: var(---white);
+  color: var(---neutral-dark-blue);
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.8rem;
+  margin: 0 auto 1rem auto;
+}
+
+/* input box styles */
+.input-box {
+  margin: 1.1rem auto;
+}
+
+/* input box input styles */
+.input-box input {
+  font-weight: var(---font-weight-600);
+  font-size: var(---font-size-body);
+  height: 4rem;
+  width: 100%;
+  border: 0.5px solid var(---neutral-grayish-blue);
+  border-radius: 0.3rem;
+  padding: 1rem 0 1rem 2rem;
+}
+/* input focus mode */
+.input-box input:focus {
+  outline: 0.5px solid var(---neutral-grayish-blue);
+}
+
+/*to be used dynamically using javascript */
+.firstname-error-message,
+.lastname-error-message,
+.email-error-message,
+.password-error-message {
+  text-align: right;
+  color: var(---error-color);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem 0;
+  display: none;
+}
+
+/* when the error is active  */
+.active {
+  display: block;
+}
+
+/*to be used dynamically using javascript */
+.main-error {
+  background: url(./images/icon-error.svg) no-repeat center right 7%;
+  border: 1.5px solid var(---error-color) !important;
+}
+
+/* email invalid placeholder color */
+.email.error-active::placeholder {
+  color: var(---error-color);
+}
+
+/* button styles */
+.submit-btn {
+  width: 100%;
+  font-weight: var(---font-weight-700);
+  font-size: var(---font-size-body);
+  background-color: var(---primary-green);
+  color: var(---white);
+  border: none;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  margin: 0.8rem 0;
+  padding: 1.5rem 0 1.5rem 0;
+  line-height: 1rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+/* submit button hover effect */
+.submit-btn:hover {
+  background-color: #38cc8ccd;
+}
+
+/* conditions styles */
+.conditions {
+  color: var(---neutral-grayish-blue);
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+
+/* anchor link styles */
+.anchor-link {
+  color: var(---error-color);
+  font-weight: var(---font-weight-600);
+}
+
+/* anchor link hover effect */
+.anchor-link:hover {
+  text-decoration: underline;
+}
+
+/* MEDIA QUERY(tablet and medium screen) */
+@media (min-width: 40rem) {
+  /* button and form-content width */
+  .button,
+  .form-content {
+    max-width: 30rem;
+  }
+  /* desc styles */
+  .desc {
+    padding-inline: 0.5rem;
+  }
+}
+
+/* MEDIA QUERY(desktop and large screens) */
+@media (min-width: 64rem) {
+  /* body styles */
+  body {
+    padding: 0;
+    background: url(./images/bg-intro-desktop.png) no-repeat fixed center
+      var(---primary-red);
+  }
+
+  /* intro container styles */
+  .intro-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    margin: 0 1rem;
+  }
+
+  /* text-content styles */
+  .text-content {
+    text-align: left;
+    margin-left: 5rem;
+  }
+
+  /* button and form-content styles */
+  .button,
+  .form-content {
+    max-width: 40rem;
+    margin-right: 3rem;
+  }
+  /* form content styles */
+  .form-content {
+    padding: 2rem;
+  }
+
+  /* condition styles */
+  .conditions {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,57 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro component with sign up form</title>
-  <link rel="stylesheet" href="/intro-component.css">
-</head>
-<body>
-  <main class="wrapper">
-    <div class="intro-container">
-      <div class="intro-col text-content">
-        <h1 class="title">  Learn to code by <br> watching others</h1>
-          <p class="desc">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p> 
-      </div>
-      <div class="form-container"> 
-        <div class="button">
-          <p> Try it free 7 days<span> then<br> $20/mo. thereafter</span></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="intro-container">
+        <div class="intro-col text-content">
+          <h1 class="title">
+            Learn to code by <br />
+            watching others
+          </h1>
+          <p class="desc">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
         </div>
-      <div class="intro-col form-content">
-        <form action="#">
-          <div class="input-box">
-            <input type="text" name="name" id="#" placeholder="First Name" required>
+        <div class="form-container">
+          <div class="button">
+            <p>
+              Try it free 7 days<span>
+                then<br />
+                $20/mo. thereafter</span
+              >
+            </p>
           </div>
-          <div class="input-box">
-            <input type="text" name="name" id="#" placeholder="Last Name" required>
+          <div class="intro-col form-content">
+            <form action="#">
+              <div class="input-box">
+                <input
+                  type="text"
+                  name="name"
+                  id="firstname"
+                  placeholder="First Name"
+                  required
+                  autocomplete="username"
+                  class="firstName-error"
+                />
+                <p class="firstname-error-message">
+                  First Name cannot be empty
+                </p>
+              </div>
+              <div class="input-box">
+                <input
+                  type="text"
+                  name="name"
+                  id="lastname"
+                  placeholder="Last Name"
+                  required
+                  autocomplete="name"
+                  class="lastname-error"
+                />
+                <p class="lastname-error-message">Last Name cannot be empty</p>
+              </div>
+              <div class="input-box">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="email-error"
+                  placeholder="Email Address"
+                  autocomplete="email"
+                  required
+                />
+                <p class="email-error-message">Looks like this is not email</p>
+              </div>
+              <div class="input-box">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                  autocomplete="current-password"
+                  class="password-error"
+                />
+                <p class="password-error-message">Password cannot be empty</p>
+              </div>
+              <button type="button" class="submit-btn" id="submit-button">
+                Claim your free trial
+              </button>
+            </form>
+            <p class="conditions">
+              By clicking the button, you are agreeing to our
+              <a href="#" class="anchor-link">Terms and Services</a>
+            </p>
           </div>
-          <div class="input-box">
-            <input type="email" name="email id="#" placeholder="Email Address" required>
-          </div>
-          <div class="input-box">
-            <input type="password" name="password id="#" placeholder="Password" required>
-          </div>
-          <input type="submit" value="Claim your free trial">
-        </form>
-        <p>By clicking the button, you are agreeing to our <span class="red">Terms and Services</span></p>
+        </div>
       </div>
-    </div>
-    </div>
-  </main>
+    </main>
 
-
-
-
-
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Sadick Sulley</a>.
-    </p>
-  </footer>
-</body>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Sadick Sulley</a>.
+      </p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
