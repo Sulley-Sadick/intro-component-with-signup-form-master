@@ -18,6 +18,19 @@ const lastNameInput = document.getElementById("lastname");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 
+// Function: To add error message and error image
+const addErrorMessageAndImage = function () {
+  firstNameErrorMessage.classList.add("active");
+  firstNameInput.classList.add("main-error");
+};
+
+//Function: To remove error message and error image
+
+const removeErrorMessageAndImage = function () {
+  firstNameErrorMessage.classList.remove("active");
+  firstNameInput.classList.add("main-error");
+};
+
 // ** Add evenListener to submit button **//
 submitBtn.addEventListener("click", function () {
   // retrieve input field values
@@ -29,10 +42,11 @@ submitBtn.addEventListener("click", function () {
 
   //check if firstNameInput is invalid
   if (firstNameValue === "") {
-    firstNameErrorMessage.classList.add("active");
-    firstNameInput.classList.add("main-error");
+    addErrorMessageAndImage();
   } else if (lettersOnly.test(firstNameValue)) {
-    firstNameErrorMessage.classList.remove("active");
-    firstNameInput.classList.remove("main-error");
+    removeErrorMessageAndImage();
+  } else {
+    firstNameInput.placeholder = "Only letters allowed";
+    addErrorMessageAndImage();
   }
 });
