@@ -131,7 +131,8 @@ body {
   color: var(---error-color);
   font-style: italic;
   font-size: 0.9rem;
-  margin: 0.5rem 0 1rem 0;
+  height: 4px;
+  margin: 0.5rem 0 2rem 0;
   display: none;
 }
 
@@ -141,14 +142,31 @@ body {
 }
 
 /*to be used dynamically using javascript */
-.main-error {
+.error-image {
   background: url(./images/icon-error.svg) no-repeat center right 7%;
-  border: 1.5px solid var(---error-color) !important;
+}
+/* to be used dynamically using javascript */
+.error-border {
+  outline: 1.5px solid var(---error-color) !important;
 }
 
 /* email invalid placeholder color */
-.email.error-active::placeholder {
+.placeholder-error::placeholder {
   color: var(---error-color);
+}
+
+/* password input styles */
+.password-input {
+  position: relative;
+}
+
+/* fa regular icon styles */
+.eyes-close {
+  width: 1.5rem;
+  position: absolute;
+  top: 35%;
+  right: 4%;
+  cursor: pointer;
 }
 
 /* button styles */

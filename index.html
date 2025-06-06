@@ -9,6 +9,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <title>Frontend Mentor | Intro component with sign up form</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -45,7 +49,6 @@
                   placeholder="First Name"
                   required
                   autocomplete="username"
-                  class="firstName-error"
                 />
                 <p class="firstname-error-message">
                   First Name cannot be empty
@@ -59,7 +62,6 @@
                   placeholder="Last Name"
                   required
                   autocomplete="name"
-                  class="lastname-error"
                 />
                 <p class="lastname-error-message">Last Name cannot be empty</p>
               </div>
@@ -68,7 +70,6 @@
                   type="email"
                   name="email"
                   id="email"
-                  class="email-error"
                   placeholder="Email Address"
                   autocomplete="email"
                   required
@@ -76,16 +77,23 @@
                 <p class="email-error-message">Looks like this is not email</p>
               </div>
               <div class="input-box">
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Password"
-                  required
-                  autocomplete="current-password"
-                  class="password-error"
-                />
-                <p class="password-error-message">Password cannot be empty</p>
+                <div class="password-input">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                    autocomplete="current-password"
+                    class="password-error"
+                  />
+                  <img
+                    src="./images/eye-close.png"
+                    alt="eyes close"
+                    class="eyes-close"
+                  />
+                  <p class="password-error-message">Password cannot be empty</p>
+                </div>
               </div>
               <button type="button" class="submit-btn" id="submit-button">
                 Claim your free trial
